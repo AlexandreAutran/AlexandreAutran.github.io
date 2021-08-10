@@ -3250,14 +3250,14 @@ input, select, textarea {
 
 		#wrapper.fade-in:before {
 			pointer-events: none;
-			-moz-transition: opacity 1s ease-in-out;
-			-webkit-transition: opacity 1s ease-in-out;
-			-ms-transition: opacity 1s ease-in-out;
-			transition: opacity 1s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
+			-moz-transition: opacity 0.5s ease-in-out;
+			-webkit-transition: opacity 0.5s ease-in-out;
+			-ms-transition: opacity 0.5s ease-in-out;
+			transition: opacity 0.5s ease-in-out;
+			-moz-transition-delay: 0.5s;
+			-webkit-transition-delay: 0.5s;
+			-ms-transition-delay: 0.5s;
+			transition-delay: 0.5s;
 			background: #1e252d;
 			content: '';
 			display: block;
@@ -3285,7 +3285,7 @@ input, select, textarea {
 
 	#intro {
 		color: #ffffff;
-		padding: 8rem 4rem 6rem 4rem ;
+		padding: 8rem 4rem 12rem 4rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3310,7 +3310,7 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
+		min-height: 80vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -3452,8 +3452,8 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#intro {
-				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
+				padding: 4rem 4rem 12rem 4rem ;
+				min-height: 80vh;
 			}
 
 				#intro p br {
@@ -3469,8 +3469,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+				padding: 3rem 2rem 14rem 2rem ;
+				min-height: 70vh;
 			}
 
 				#intro h1 {
@@ -3581,11 +3581,31 @@ input, select, textarea {
 				color: #18bfef !important;
 			}
 
+		#header .myLogo {
+			width: 600px;
+		}
+
+		@media screen and (max-width: 1680px) {
+
+			#header {
+				padding-bottom: 6rem;
+			}
+
+				#header .myLogo {
+					width: 500px;
+				}
+
+		}
+
 		@media screen and (max-width: 980px) {
 
 			#header {
 				height: 14rem;
-				padding-bottom: 4rem;
+				padding-bottom: 2rem;
+			}
+
+			#header .myLogo {
+				width: 400px;
 			}
 
 		}
@@ -3599,6 +3619,10 @@ input, select, textarea {
 				#header .logo {
 					font-size: 1.75rem;
 					border-width: 3px !important;
+				}
+
+				#header .myLogo {
+					width: 300px;
 				}
 
 		}
@@ -4687,3 +4711,230 @@ input, select, textarea {
 		}
 
 	}
+
+	/* Alex */
+
+	.myPhoto {
+		width: 200px;
+		margin-bottom: 10px;
+		clip-path: circle();
+	}
+
+	/* Image */
+
+	.image {
+		position: relative;
+		display: inline-block;
+		background:rgba(220, 220, 220, 0.25);
+		border: 0;
+		outline: 0;
+	}
+
+		.image img {
+			display: block;
+			width: 100%;
+		}
+
+		.image.fit {
+			display: block;
+			width: 100%;
+		}
+
+		.image.featured {
+			display: block;
+			width: 100%;
+			margin: 0 0 4em 0;
+		}
+
+		.image.left {
+			float: left;
+			margin: 0 2em 2em 0;
+		}
+
+		.image.centered {
+			display: block;
+			margin: 0 0 2em 0;
+		}
+
+			.image.centered img {
+				margin: 0 auto;
+				width: auto;
+			}
+
+	/* Carousel */
+
+	.carousel {
+		position: relative;
+		overflow: hidden;
+		padding: 2em 0 2em 0;
+		margin-bottom: 0;
+	}
+
+		.carousel .forward, .carousel .backward {
+			position: absolute;
+			top: 50%;
+			width: 6em;
+			height: 12em;
+			margin-top: -6em;
+			cursor: pointer;
+		}
+
+			.carousel .forward:before, .carousel .backward:before {
+				content: '';
+				display: block;
+				width: 6em;
+				height: 6em;
+				border-radius: 100%;
+				background-color: rgba(72, 57, 73, 0.5);
+				position: absolute;
+				top: 50%;
+				margin-top: -3em;
+				-moz-transition: background-color 0.35s ease-in-out;
+				-webkit-transition: background-color 0.35s ease-in-out;
+				-o-transition: background-color 0.35s ease-in-out;
+				-ms-transition: background-color 0.35s ease-in-out;
+				transition: background-color 0.35s ease-in-out;
+				-webkit-backface-visibility: hidden;
+			}
+
+			.carousel .forward:after, .carousel .backward:after {
+				content: '';
+				width: 3em;
+				height: 3em;
+				position: absolute;
+				top: 50%;
+				margin: -1.5em 0 0 0;
+				background: url("images/arrow.svg") no-repeat center center;
+			}
+
+			.carousel .forward:hover:before, .carousel .backward:hover:before {
+				background-color: rgba(239, 131, 118, 0.75);
+			}
+
+		.carousel .forward {
+			right: 0;
+		}
+
+			.carousel .forward:before {
+				right: -3em;
+			}
+
+			.carousel .forward:after {
+				right: -0.25em;
+			}
+
+		.carousel .backward {
+			left: 0;
+		}
+
+			.carousel .backward:before {
+				left: -3em;
+			}
+
+			.carousel .backward:after {
+				left: -0.25em;
+				-moz-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				-ms-transform: scaleX(-1);
+				transform: scaleX(-1);
+			}
+
+		.carousel .reel {
+			white-space: nowrap;
+			position: relative;
+			-webkit-overflow-scrolling: touch;
+			padding: 0 2em 0 2em;
+		}
+
+		.carousel article {
+			display: inline-block;
+			width: 18em;
+			background: #fff;
+			text-align: center;
+			padding: 0 1em 3em 1em;
+			margin: 0 2em 0 0;
+			white-space: normal;
+			opacity: 1.0;
+			-moz-transition: opacity 0.75s ease-in-out;
+			-webkit-transition: opacity 0.75s ease-in-out;
+			-ms-transition: opacity 0.75s ease-in-out;
+			transition: opacity 0.75s ease-in-out;
+		}
+
+			.carousel article.loading {
+				opacity: 0;
+			}
+
+			.carousel article .image {
+				position: relative;
+				left: -1em;
+				top: 0;
+				width: auto;
+				margin-right: -2em;
+				margin-bottom: 3em;
+			}
+
+			.carousel article p {
+				text-align: center;
+			}
+
+	/* Wide */
+	@media screen and (max-width: 1680px) {
+
+		/* Carousel */
+
+			.carousel {
+				padding: 1.5em 0 1.5em 0;
+			}
+
+				.carousel .reel {
+					padding: 0 1.5em 0 1.5em;
+				}
+
+				.carousel article {
+					width: 18em;
+					margin: 0 1.25em 0 0;
+				}
+	}
+
+	/* Narrower */
+	@media screen and (max-width: 840px) {
+
+		/* Carousel */
+
+			.carousel {
+				padding: 1.25em 0 1.25em 0;
+			}
+
+				.carousel article {
+					width: 18em;
+					margin: 0 1em 0 0;
+				}
+
+	}
+
+	/* Mobile */
+	@media screen and (max-width: 736px) {
+		/* Carousel */
+
+		.carousel {
+			padding: 0.5em 0 0.5em 0;
+		}
+
+			.carousel .reel {
+				padding: 0 0.5em 0 0.5em;
+			}
+
+			.carousel article {
+				width: 14em;
+				padding-bottom: 2em;
+				margin: 0 0.5em 0 0;
+			}
+
+				.carousel article .image {
+					margin-bottom: 2em;
+				}
+	}
+	
+
+			
