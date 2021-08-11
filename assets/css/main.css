@@ -4725,7 +4725,6 @@ input, select, textarea {
 	.image {
 		position: relative;
 		display: inline-block;
-		background:rgba(220, 220, 220, 0.25);
 		border: 0;
 		outline: 0;
 	}
@@ -4740,10 +4739,17 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		.image.icon {
+			display: block;
+			width: 100px;
+			height: 100px;
+		}
+
 		.image.featured {
 			display: block;
 			width: 100%;
 			margin: 0 0 4em 0;
+			background:rgba(220, 220, 220, 0.25);
 		}
 
 		.image.left {
