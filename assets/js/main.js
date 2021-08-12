@@ -265,6 +265,31 @@
 
 		}
 
+		// Trigger a CSS transition on scroll
+		function transitionOnScroll (image, wraper) {
+			const myImage = document.querySelector(image);
+			myImage.classList.remove('myImage-transition');
+
+			// Create the observer, same as before:
+			const observer = new IntersectionObserver(entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						myImage.classList.add('myImage-transition');
+						return;
+					}
+					myImage.classList.remove('myImage-transition');
+				});
+			});
+
+			observer.observe(document.querySelector(wraper));
+		}
+
+		transitionOnScroll('.learningImage', '.learningImage-wrapper')
+		transitionOnScroll('.mathsImage', '.mathsImage-wrapper')
+		transitionOnScroll('.localisationImage', '.localisationImage-wrapper')
+		transitionOnScroll('.tarifsImage', '.tarifsImage-wrapper')
+			
+
 		// Carousels.
 		$('.carousel').each(function() {
 
