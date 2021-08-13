@@ -347,6 +347,10 @@ input, select, textarea {
 			justify-content: center;
 		}
 
+		.row.aln-evenly {
+			justify-content: space-evenly;
+		}
+
 		.row.aln-right {
 			justify-content: flex-end;
 		}
