@@ -57,7 +57,7 @@
 		}
 
 		if (!intensity)
-			intensity = 0.25;
+			intensity = 0.5;
 
 		$this.each(function() {
 
@@ -103,7 +103,7 @@
 			// Enable everywhere else.
 				else {
 
-					breakpoints.on('>large', on);
+					breakpoints.on('>large', off); //Alex modif, on to scroll image
 					breakpoints.on('<=large', off);
 
 				}
