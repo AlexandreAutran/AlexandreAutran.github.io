@@ -2964,7 +2964,7 @@ input, select, textarea {
 
 			header.major > .date {
 				font-size: 1rem;
-				margin: 0 0 4rem 0;
+				margin: 0 0 2rem 0;
 			}
 
 				header.major > .date:before, header.major > .date:after {
@@ -3656,13 +3656,13 @@ input, select, textarea {
 	}
 
 	#headerA .myLogo {
-		width: 450px;
+		width: 1200px;
 	}
 
 	@media screen and (max-width: 1680px) {
 
 			#headerA .myLogo {
-				width: 330px;
+				width: 900px;
 			}
 
 	}
@@ -3670,7 +3670,7 @@ input, select, textarea {
 	@media screen and (max-width: 1280px) {
 
 		#headerA .myLogo {
-			width: 300px;
+			width: 820px;
 		}
 
 }
@@ -3683,7 +3683,7 @@ input, select, textarea {
 		}
 
 		#headerA .myLogo {
-			width: 250px;
+			width: 720px;
 		}
 
 	}
@@ -3696,10 +3696,18 @@ input, select, textarea {
 			}
 
 			#headerA .myLogo {
-				width: 260px;
+				width: 100vw;
 			}
 
 	}
+
+	@media screen and (max-width: 500px) {
+
+		#headerA {
+			height: 10rem;
+		}
+
+}
 
 /* Nav */
 
